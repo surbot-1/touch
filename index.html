@@ -13,6 +13,9 @@
 </canvas>
 <br>
 Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
+<br>
+<canvas id="canvas2" width="1080" height="644" style="border:solid black 1px;">
+</canvas>
   
 <script>
   
@@ -178,6 +181,31 @@ var ongoingTouches = [];
 
 <script>
 
+  var canvas2  = document.getElementById("canvas2");
+  var context2 = canvas2.getContext('2d');
+  
+  function image21() {
+  var image2 = new Image();
+        image2.src = 'qwerty1.jpeg';
+        image2.onload = function (e)
+        {
+           context2.drawImage(image2, 0, 0, 1080, 644);
+        }
+  }
+  function image22() {
+  var image2 = new Image();
+        image2.src = 'qwerty1.jpeg';
+        image2.onload = function (e)
+        {
+           context2.drawImage(image2, 0, 0, 1080, 644);
+        }
+  }
+  
+  setInterval(image21, 2000);
+  setTimeout(function() {
+  setInterval(image22, 2000);
+  }, 1000);
+  
 </script>
 
 <script>
