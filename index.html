@@ -247,7 +247,9 @@ var context4 = canvas4.getContext('2d');
 /* var file4 = document.getElementById("file").files[0] ;
 var reader4 = new FileReader();
 reader4.onload = function(event4) {
-var url4 = event4.target.result; */
+var url4 = event4.target.result;
+var base64String4 = event4.targel.result.replace('data:', '').replace(/^.+,/, ''); 
+localStorage.setItem('Image4', base64String4);  */
   
   function image4() {
   var image4 = new Image();
