@@ -245,28 +245,31 @@ function abc4() {
 var canvas4  = document.getElementById("canvas4");
 var context4 = canvas4.getContext('2d');
   
-/* var file4 = document.getElementById("file").files[0] ;
+var file4 = document.getElementById("file").files[0] ;
 var reader4 = new FileReader();
 reader4.onload = function(event4) {
-var url4 = event4.target.result;
+/* var url4 = event4.target.result;
 var base64String4 = event4.targel.result.replace('data:', '').replace(/^.+,/, ''); 
 localStorage.setItem('ImageTest', base64String4); 
 var image41 = document.createElement('img'); 
 image41.src = localStorage.getItem('ImageTest');
 document.getElementById('body').appendChild(img); */
   
+  
   image4();
+// var _URL = window.URL || window.webkitURL;
   function image4() {
   var image4 = new Image();
-        image4.src = 'Turbo-Snail-icon.png'; // image4.src = URL.createObjectURL(file4);
+        // image4.src = 'Turbo-Snail-icon.png';
+        image4.src = URL.createObjectURL(file4);
         image4.onload = function (e) {
         
            context4.drawImage(image4, 0, 0);
         };
   }
   
- /* };
-  reader4.readAsDataURL(file4); */
+  };
+  reader4.readAsDataURL(file4); 
 }
   
 </script>
