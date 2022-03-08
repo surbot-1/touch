@@ -16,6 +16,11 @@ Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
 <br>
 <canvas id="canvas2" width="1080" height="644" style="border:solid black 1px;">
 </canvas>
+<br>
+<canvas id="canvas3" width=240 height=240 style="background-color:#808080;">
+</canvas>
+<p></p>
+<a id="download" download="myImage.jpg" href="" onclick="download_img(this);">Download to myImage.jpg</a>
   
 <script>
   
@@ -210,7 +215,23 @@ var ongoingTouches = [];
 </script>
 
 <script>
+alert('3');
+var canvas3 = document.getElementById("canvas3");
+var ctx3 = canvas3.getContext("2d");
+var ox3 = canvas3.width / 2;
+var oy3 = canvas3.height / 2;
+ctx3.font = "42px serif";
+ctx3.textAlign = "center";
+ctx3.textBaseline = "middle";
+ctx3.fillStyle = "#800";
+ctx3.fillRect(ox3 / 2, oy3 / 2, ox3, oy3);
 
+download_img = function(el) {
+  // get image URI from canvas object
+  var imageURI3 = canvas3.toDataURL("image/jpg");
+  el.href = imageURI3;
+};
+  
 </script>
 
 <script>
