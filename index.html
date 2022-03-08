@@ -21,6 +21,10 @@ Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
 </canvas>
 <p></p>
 <a id="download" download="myImage.jpg" href="" onclick="download_img(this);">Download to myImage.jpg</a>
+<br>
+<input type="file" name="file" id="file"> <button onclick = "abc4()"> Button </button> <br>
+<canvas id="canvas4" width="1080" height="2400" style="border:solid black 1px;">
+</canvas>
   
 <script>
   
@@ -235,6 +239,28 @@ download_img = function(el) {
 </script>
 
 <script>
+  
+function abc4() {
+var canvas4  = document.getElementById("canvas4");
+var context4 = canvas4.getContext('2d');
+  
+var file4 = document.getElementById("file").files[0] ;
+var reader4 = new FileReader();
+reader4.onload = function(event4) {
+var url4 = event4.target.result;
+  
+  function image4() {
+  var image4 = new Image();
+        image4.src = 'url4';
+        image4.onload = function (event42) {
+        
+           context4.drawImage(image4, 0, 0, 1080, 2400);
+        }
+  }
+  
+  };
+  reader4.readAsDataURL();
+}
   
 </script>
   
