@@ -270,5 +270,70 @@ document.getElementById('body').appendChild(img); */
   
 </script>
   
+<script>
+  /*
+  function typedArrayToURL(typedArray, mimeType) {
+  return URL.createObjectURL(new Blob([typedArray.buffer], {type: mimeType}))
+}
+
+const bytes = new Uint8Array(59);
+
+for(let i = 0; i < 59; i++) {
+  bytes[i] = 32 + i;
+}
+
+const url = typedArrayToURL(bytes, 'text/plain');
+
+const link = document.createElement('a');
+link.href = url;
+link.innerText = 'Open the array URL';
+
+document.body.appendChild(link);
+  
+const reader = new FileReader();
+reader.addEventListener('loadend', () => {
+   // reader.result contains the contents of blob as a typed array
+});
+reader.readAsArrayBuffer(blob);
+
+
+  */
+  
+  
+</script>
+
+<script>
+
+  /*  const img = document.createElement("img");
+      img.src = URL.createObjectURL(this.files[i]);
+      img.height = 60;
+      img.onload = function() {
+        URL.revokeObjectURL(this.src);
+      }
+      li.appendChild(img); */
+  
+ /* var canvas = document.getElementById('myCanvas'),
+ctx = canvas.getContext('2d'),
+image = new Image();
+
+// Wait for the sprite sheet to load
+image.onload = function() {
+  Promise.all([
+    // Cut out two sprites from the sprite sheet
+    createImageBitmap(image, 0, 0, 32, 32),
+    createImageBitmap(image, 32, 0, 32, 32)
+  ]).then(function(sprites) {
+    // Draw each sprite onto the canvas
+    ctx.drawImage(sprites[0], 0, 0);
+    ctx.drawImage(sprites[1], 32, 32);
+  });
+}
+
+// Load the sprite sheet from an image file
+image.src = 'sprites.png'; */
+  
+  
+</script>
+  
 </body>
 </html>
